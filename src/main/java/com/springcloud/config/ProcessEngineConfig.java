@@ -58,16 +58,16 @@ public class ProcessEngineConfig {
                     .setJdbcPassword(ConfigTools.decrypt(publicKey, password))
                     .setJdbcDriver(driverClassName)
                     // 初始化基础表，不需要的可以改为 DB_SCHEMA_UPDATE_FALSE
-                    .setDatabaseSchemaUpdate(ProcessEngineConfiguration.DB_SCHEMA_UPDATE_FALSE)
+                    .setDatabaseSchemaUpdate(ProcessEngineConfiguration.DB_SCHEMA_UPDATE_TRUE);
                     // 默认邮箱配置
-                    // 发邮件的主机地址，先用 QQ 邮箱
+                  /*  // 发邮件的主机地址，先用 QQ 邮箱
                     .setMailServerHost("smtp.qq.com")
                     // POP3/SMTP服务的授权码
                     .setMailServerPassword("hergynqfusnsbbdf")
                     // 默认发件人
                     .setMailServerDefaultFrom("836369078@qq.com")
                     // 设置发件人用户名
-                    .setMailServerUsername("管理员");
+                    .setMailServerUsername("管理员");*/
         } catch (Exception e) {
             e.printStackTrace();
         }

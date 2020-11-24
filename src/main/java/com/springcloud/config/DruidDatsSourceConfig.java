@@ -122,7 +122,7 @@ public class DruidDatsSourceConfig {
 
 
     public static void main(String[] args) throws Exception {
-        String password = "xxxx";
+        String password = "root";
         String[] arr = ConfigTools.genKeyPair(512);
         System.out.println("password:" + password);
         System.out.println("privateKey:" + arr[0]);

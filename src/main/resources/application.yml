@@ -12,8 +12,6 @@ spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     druid:
-      # 下面为连接池的补充设置，应用到上面所有数据源中
-      # 初始化大小，最小，最大
       initial-size: 5
       min-idle: 5
       max-active: 20
@@ -61,7 +59,7 @@ flowable:
   # 关闭异步，不关闭历史数据的插入就是异步的，会在同一个事物里面，无法回滚
   # 开发可开启会提高些效率，上线需要关闭
   async-executor-activate: false
-  database-schema-update: true
+  #database-schema-update: true
 
 
 ---
@@ -70,9 +68,10 @@ spring:
   datasource:
     url: jdbc:mysql://localhost:3306/flowable_ui?useUnicode=true&characterEncoding=utf8&serverTimezone=GMT
     username : root
-    password : root
+    password : GmOehtizWnxVGw0bjgKnitxlHbNwjaEYSN6k64jtnRErmjhPbD+KifBKL2RIho7aejbSL1Qdb3ghGiZU/E0Wlg==
     driver-class-name: com.mysql.jdbc.Driver
-#  #Redis配置
+    publicKey: MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAKcIpQrk+z1i5fbrssFelC0UOuKDc5MDq/tGetwgX4TBDCnxUx2YMzMjq1DKiQvrJRTmrt4T/9Ya9IRCkvWn36kCAwEAAQ==
+  #  #Redis配置
 #  redis:
 #    host: xxxx #redis 地址
 #    password: xxxx
